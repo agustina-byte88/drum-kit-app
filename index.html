@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Lets the page show special characters correctly -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the page fit nicely on phones and tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Text shown on the browser tab -->
+    <title>GrooveKit</title>
+
+    <!-- Connects the CSS file that styles the page -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Main area that centers everything on the screen -->
+    <main class="drum-kit">
+
+        <!-- App title -->
+        <h1>GrooveKit</h1>
+
+        <!-- First row of drum buttons -->
+        <div class="row">
+
+            <!-- Kick drum button: data-sound says which audio to play -->
+            <button class="drum" data-sound="kick">Kick</button>
+
+            <!-- Ride cymbal button -->
+            <button class="drum" data-sound="ride">Ride</button>
+
+            <!-- Snare drum button -->
+            <button class="drum" data-sound="snare">Snare</button>
+
+        </div>
+
+        <!-- Second row of drum buttons -->
+        <div class="row">
+
+            <!-- Tom drum button -->
+            <button class="drum" data-sound="tom">Tom</button>
+
+            <!-- Hi-hat cymbal button -->
+            <button class="drum" data-sound="hihat">Hi-Hat</button>
+
+        </div>
+
+    </main>
+
+    <!-- Audio elements: preload="auto" loads each sound before it is needed,
+         so it plays instantly when a button is clicked. The id matches
+         each button's data-sound. -->
+    <audio id="kick" src="sounds/kick.wav" preload="auto"></audio>
+    <audio id="ride" src="sounds/ride.wav" preload="auto"></audio>
+    <audio id="snare" src="sounds/snare.wav" preload="auto"></audio>
+    <audio id="tom" src="sounds/tom.wav" preload="auto"></audio>
+    <audio id="hihat" src="sounds/hihat.wav" preload="auto"></audio>
+
+    <!-- Connects the JavaScript file that makes the buttons play sounds -->
+    <script src="java.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+/* Removes the browser's default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* White page with a clean font, filling the whole screen */
+body {
+    background-color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000;
+    min-height: 100vh;
+}
+
+/* Centers the title and buttons in the middle of the screen */
+.drum-kit {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    padding: 20px;
+}
+
+/* Big bold "GrooveKit" title */
+h1 {
+    font-size: 64px;
+    font-weight: bold;
+    margin-bottom: 26px;
+}
+
+/* Each row lines its buttons up side by side, centered */
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Light grey drum buttons with a thin grey border */
+.drum {
+    background-color: #efefef;
+    border: 2px solid #767676;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 44px;
+    color: #000000;
+    padding: 40px 84px;
+    cursor: pointer;
+    transition: background-color 0.1s, transform 0.08s;
+}
+
+/* Slightly darker when the mouse is over a button */
+.drum:hover {
+    background-color: #e3e3e3;
+}
+
+/* "Pressed" look while a button is clicked or its key is played */
+.drum:active,
+.drum.playing {
+    background-color: #d6d6d6;
+    transform: scale(0.96);
+}
+
+/* Smaller sizes on phones so the buttons still fit */
+@media (max-width: 700px) {
+
+    h1 {
+        font-size: 44px;
+    }
+
+    .row {
+        gap: 16px;
+    }
+
+    .drum {
+        font-size: 28px;
+        padding: 26px 40px;
+    }
+}
